@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang='en' class='wide wow-animation'>
+    <head>
+        <!-- Site Title-->
+        <title>Wheel Table Admin</title>
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta charset="utf-8">
+
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:400,300%7CRoboto+Slab:400,700%7CMontserrat:700%7CPacifico">
+        <link rel="stylesheet" href="/assets/css/style.css">
+        <link rel="stylesheet" href="/assets/js/jquery-ui-1.12.1/jquery-ui.min.css">
+        <link rel="stylesheet" href="/assets/css/pages/admin.css">
+    </head>
+  <body>
+    <!-- Page-->
+    <!--<div class="page text-center">-->
+      <!-- Page Header-->
+      <header class="header">
+        <section class="relative text-center">
+          <div class="container">
+            <div class="text-center">
+              <h1 class='title'><span class='text-bold'>Texas Hold'em Wheel Bonus</span></h1>
+            </div>
+          </div>
+        </section>
+      </header>
+      <!-- Page Content-->
+      <main class="page-content">
+      <div id="tabs">
+        <ul>
+            <li><a href="#gameConfig_section">Game Configuration</a></li>
+            <li><a href="#wheelStopOdds_section">Wheel Stop Odds</a></li>
+            <li><a href="#wheelpaytable_section">Wheel Pay Table</a></li>
+        </ul>
+
+        <section id="gameConfig_section" class="section section-inset-1">
+            <div class="container">
+                <div class="row">
+                    <form id="config_form">
+                        <div class="form-group" hidden>
+                            <label class='form_med' for="slices">Number of Wheel Stops:</label>
+                            <input type="text" id="slices" name="slices" class="form-control form_sm form_input">
+                        </div>
+                        <div class="form-group">
+                            <label class='form_med' for="bet1Amount"> Wager 1 Amount:</label>
+                            <input type="text" id="bet1Amount" name="bet1Amount" class="form-control form_sm form_input">
+                        </div>
+                        <div class="form-group">
+                            <label class='form_med' for="bet2Amount"> Wager 2 Amount:</label>
+                            <input type="text" id="bet2Amount" name="bet2Amount" class="form-control form_sm form_input">
+                        </div>
+                        <div class="form-group">
+                            <label class='form_med' for="bet3Amount"> Wager 3 Amount:</label>
+                            <input type="text" id="bet3Amount" name="bet3Amount" class="form-control form_sm form_input">
+                        </div>
+                        <div class="form-group">
+                            <label class='form_med' for="bet4Amount"> Wager 4 Amount:</label>
+                            <input type="text" id="bet4Amount" name="bet4Amount" class="form-control form_sm form_input">
+                        </div>
+                        <div class="form-group">
+                            <label class='form_med' for="bet5Amount"> Wager 5 Amount:</label>
+                            <input type="text" id="bet5Amount" name="bet5Amount" class="form-control form_sm form_input">
+                        </div>
+                        <div id="save_button" class="btn-group-variant config-buttons">
+                            <button id="config-save" class="btn btn-sm edit_btn">Update</button>
+                        </div>
+                        <div id="create_button" class="btn-group-variant config-buttons" hidden>
+                            <button id="config-create" class="btn btn-sm edit_btn">Create</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+                    
+        <section id="wheelStopOdds_section" class="section section-inset-1">
+            <div class="container">
+                <div class="row">
+                    <form id="config_form">
+                        <div class="form-group">
+                            <label class='form_med' for="slice1Odds">Wheel Stop 1 Hits:</label>
+                            <input type="text" id="slice1Odds" name="slice1Odds" class="form-control form_sm form_input hits" data-arrayNum="0">
+                        </div>
+                        <div class="form-group">
+                            <label class='form_med' for="slice2Odds">Wheel Stop 2 Hits:</label>
+                            <input type="text" id="slice2Odds" name="slice2Odds" class="form-control form_sm form_input hits" data-arrayNum="1">
+                        </div>
+                        <div class="form-group">
+                            <label class='form_med' for="slice3Odds">Wheel Stop 3 Hits:</label>
+                            <input type="text" id="slice3Odds" name="slice3Odds" class="form-control form_sm form_input hits" data-arrayNum="2">
+                        </div>
+                        <div class="form-group">
+                            <label class='form_med' for="slice4Odds">Wheel Stop 4 Hits:</label>
+                            <input type="text" id="slice4Odds" name="slice4Odds" class="form-control form_sm form_input hits" data-arrayNum="3">
+                        </div>
+                        <div class="form-group">
+                            <label class='form_med' for="slice5Odds">Wheel Stop 5 Hits:</label>
+                            <input type="text" id="slice5Odds" name="slice5Odds" class="form-control form_sm form_input hits" data-arrayNum="4">
+                        </div>
+                        <div class="form-group">
+                            <label class='form_med' for="slice6Odds">Wheel Stop 6 Hits:</label>
+                            <input type="text" id="slice6Odds" name="slice6Odds" class="form-control form_sm form_input hits" data-arrayNum="5">
+                        </div>
+                        <div class="form-group">
+                            <label class='form_med' for="slice7Odds">Wheel Stop 7 Hits:</label>
+                            <input type="text" id="slice7Odds" name="slice7Odds" class="form-control form_sm form_input hits" data-arrayNum="6">
+                        </div>
+                        <div class="form-group">
+                            <label class='form_med' for="slice8Odds">Wheel Stop 8 Hits:</label>
+                            <input type="text" id="slice8Odds" name="slice8Odds" class="form-control form_sm form_input hits" data-arrayNum="7">
+                        </div>
+                        <div class="form-group">
+                            <label class='form_med' for="slice9Odds">Wheel Stop 9 Hits:</label>
+                            <input type="text" id="slice9Odds" name="slice9Odds" class="form-control form_sm form_input hits" data-arrayNum="8">
+                        </div>
+                        <div class="form-group">
+                            <label class='form_med' for="slice10Odds">Wheel Stop 10 Hits:</label>
+                            <input type="text" id="slice10Odds" name="slice10Odds" class="form-control form_sm form_input hits" data-arrayNum="9">
+                        </div>
+                        <div class="form-group">
+                            <label class='form_med' for="slice11Odds">Wheel Stop 11 Hits:</label>
+                            <input type="text" id="slice11Odds" name="slice11Odds" class="form-control form_sm form_input hits" data-arrayNum="10">
+                        </div>
+                        <div class="form-group">
+                            <label class='form_med' for="slice12Odds">Wheel Stop 12 Hits:</label>
+                            <input type="text" id="slice12Odds" name="slice12Odds" class="form-control form_sm form_input hits" data-arrayNum="11">
+                        </div>
+                        <div class="form-group">
+                            <label class='form_med' for="slice13Odds">Wheel Stop 13 Hits:</label>
+                            <input type="text" id="slice13Odds" name="slice13Odds" class="form-control form_sm form_input hits" data-arrayNum="12">
+                        </div>
+                        <div class="form-group">
+                            <label class='form_med' for="slice14Odds">Wheel Stop 14 Hits:</label>
+                            <input type="text" id="slice14Odds" name="slice14Odds" class="form-control form_sm form_input hits" data-arrayNum="13">
+                        </div>
+                        <div class="form-group">
+                            <label class='form_med' for="slice15Odds">Wheel Stop 15 Hits:</label>
+                            <input type="text" id="slice15Odds" name="slice15Odds" class="form-control form_sm form_input hits" data-arrayNum="14">
+                        </div>
+                        <div class="form-group">
+                            <label class='form_med' for="slice16Odds">Wheel Stop 16 Hits:</label>
+                            <input type="text" id="slice16Odds" name="slice16Odds" class="form-control form_sm form_input hits" data-arrayNum="15">
+                        </div>
+                        <div class="form-group">
+                            <label class='form_med' for="totalHits">Total Hits:</label>
+                            <input type="text" id="totalHits" name="totalHits" class="form-control form_sm form_input" readonly>
+                        </div>
+                        <div id="save_button" class="btn-group-variant config-buttons">
+                            <button id="configOdds-save" class="btn btn-sm edit_btn">Update</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+                    
+        <section id="wheelpaytable_section" class="section section-inset-1">
+            <div class="container reportsContainer">
+                <div id="wheelPaytTableTabs">
+                    <ul>
+                        <li><a href="#baseAmounts">Pay Table</a></li>
+                        <li><a href="#wheelImage">Wheel Image</a></li>
+                    </ul>
+                    
+                    <div id='baseAmounts' class="row">
+                        <div class="col-xs-12">
+                            <div class="table-responsive">
+                                <table class="table-striped table">
+                                    <thead>
+                                        <tr class="bg-light">
+                                            <th class="text-left">Wheel Stop</th>
+                                            <th class="text-left">Slice Location</th>
+                                            <th class="text-center">Base Amount</th>
+                                            <th class="text-center">Progressive</th>
+                                            <th class="text-center">Progressive Min Wager Number</th>
+                                            <th class="text-center">Progressive Base Amount</th>
+                                            <th class="text-center">Progressive Increment Percent</th>
+                                            <th class="text-left">Current Pool</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id='baseAmountsTable'>
+                                    </tbody>
+                                </table>
+                            </div>  <!-- Table Responsive -->
+                        </div>  <!-- Column -->
+                        <div class='btn-group-variant paytable-buttons'>
+                            <button id="wheeltable-create" class="btn btn-sm edit_btn">Pre-Populate</button>
+                        </div>
+                    </div>
+                    
+                    <div id='wheelImage' class="row">
+                        <div class="col-xs-12">
+                            <img src="/assets/img/wheelstops.png" alt="">
+                        </div>  <!-- Column -->
+                    </div>
+                    
+                </div> <!-- Tabs -->
+            </div>
+        </section>
+                    
+      </div> <!-- Tabs -->
+      </main>
+    <!--</div>-->
+    <script src="/assets/js/jquery-3.1.0.min.js"></script>
+    <script src="/assets/js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script src="/assets/js/config.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src='/assets/js/wheelAdmin.js'></script>
+    <script>
+        page_initialize();
+        page_actions();
+    </script>
+  </body>
+</html>

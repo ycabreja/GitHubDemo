@@ -1,0 +1,300 @@
+/* ==================================================================================== */
+/*                                 Magnum Poker                                         */
+/*                              Copyright (c) 2020                                      */
+/*                                 Tioli Gaming                                         */
+/*                                                                                      */
+/* This file defines the cascading style sheet styles for the Admin page.               */
+/* ------------------------------------------------------------------------------------ */
+/* Calls To:     None                                                                   */
+/*                                                                                      */
+/* Called From:  src/adminMessges.html                                                  */
+/* ==================================================================================== */
+/*                                            CHANGE LOG                                */
+/* ------------------------------------------------------------------------------------ */
+/* DATE   |    CHANGE ID     | CHANGE DESCRIPTION / NOTES                               */
+/* ------------------------------------------------------------------------------------ */
+/* 042220 |       NA         | Original Code                                            */
+/* ------------------------------------------------------------------------------------ */
+/*        |                  |                                                          */
+/* ------------------------------------------------------------------------------------ */
+/*        |                  |                                                          */
+/* ==================================================================================== */
+
+.header {
+    background-color: #b72025;
+    padding: 20px;
+}
+
+.title {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+}
+
+.form-group > label {
+    padding-top: 5px;
+}
+
+.form_input{
+    font-size: 16px;
+}
+
+.page-content {
+    width: 75%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+#gameConfig_section .container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#paytable_section .container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 100%;
+}
+
+.pricing-table{
+    margin-top: 0px;
+    padding-top: 0px;
+    color: #333333;
+}
+
+/* Table */
+.table-responsive > .table > thead > tr > th,
+.table-responsive > .table > thead > tr > td,
+.table-responsive > .table > tbody > tr > th,
+.table-responsive > .table > tbody > tr > td,
+.table-responsive > .table > tfoot > tr > th,
+.table-responsive > .table > tfoot > tr > td {
+    white-space: normal;
+}
+
+table > tr > td {
+    color: #333333;
+}
+
+/* Form */
+.form-control {
+    color: #333333;
+    font-weight: bold;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    height: 35px;
+    margin-bottom: 20px;
+}
+
+.form-control:focus {
+    border-color: #333333;
+}
+
+.form-control::-moz-placeholder {
+    color: #333333;
+    opacity: 1;
+}
+
+.form-control:-ms-input-placeholder {
+    color: #333333;
+}
+
+.form-control::-webkit-input-placeholder {
+    color: #333333;
+}
+
+.form-control::-ms-expand {
+    border: 0;
+    background-color: transparent;
+}
+
+.form_med {
+    float: left;
+    clear: left;
+    width: 20%;
+    margin-right: 2%;
+    text-align: right;
+}
+
+.form_sm {
+    float: left;
+    clear: right;
+    width: 10%;
+}
+
+/* buttons */
+.container .config-buttons {
+    width: 35%;
+    clear: left;
+    float: left;
+}
+
+#config-save {
+    float: right;
+}
+
+.container .paytable-buttons,
+.container .bonustable-buttons {
+    clear: left;
+    margin-top: 10%;
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+.btn-sm{
+    background-color: #333333;
+    color: #FFF;
+}
+
+.edit_btn {
+  display: inline-block;
+  margin: 0px;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-color: #333333;
+  color: #FFF;
+  border: 1.5px solid transparent;
+  white-space: nowrap;
+  padding: 15px 10px;
+  font-size: 13px;
+  line-height: .5;
+  border-radius: 10px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.reportsContainer {
+    width: 100%;
+}
+
+@media screen and (max-width: 1365px) {
+    .page-content {
+        width: 100%;
+    }
+    
+    .container {
+        width: 100%;        
+    }
+    
+    .form-control {
+        width: 100%;
+    }
+    
+    .form_med {
+        width: 100%;
+        text-align: left;
+    }
+
+    .form_sm {
+        width: 100%;
+    }
+    
+    .container .config-buttons {
+        width: 100%;
+    }
+    
+    .container .paytable-buttons {
+        margin-right: 1%;
+    }
+    
+    .form_input{
+        font-size: 12px;
+    }
+    
+    #tabs {
+        font-size: 14px;
+    }
+    
+    .table-responsive{
+        font-size: 10px;
+        width: 100%;
+    }
+
+    .table > thead > tr > td,
+    .table > tbody > tr > td,
+    .table > tfoot > tr > td {
+      padding: 10px 2px;
+    }
+
+    .table > thead > tr > th,
+    .table > tbody > tr > th,
+    .table > tfoot > tr > th {
+      padding: 12px 4px;
+    }
+
+    .edit_btn{
+        padding: 10px 8px;
+        font-size: 11px;        
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .page-content {
+        width: 100%;
+    }
+    
+    .container {
+        width: 100%;        
+    }
+    
+    .col-xs-11{
+        width: 100%;        
+    }
+    
+    .form-control {
+        width: 100%;
+    }
+    
+    .form_med {
+        width: 100%;
+        text-align: left;
+    }
+
+    .form_sm {
+        width: 100%;
+    }
+    
+    .container .config-buttons {
+        width: 100%;
+    }
+    
+    .container .paytable-buttons {
+        margin-right: 1%;
+    }
+    
+    .form_input{
+        font-size: 12px;
+    }
+    
+    #tabs {
+        font-size: 12px;
+    }
+    
+    .table-responsive{
+        font-size: 10px;
+        width: 100%;
+    }
+
+    .table > thead > tr > td,
+    .table > tbody > tr > td,
+    .table > tfoot > tr > td {
+      padding: 10px 2px;
+    }
+
+    .table > thead > tr > th,
+    .table > tbody > tr > th,
+    .table > tfoot > tr > th {
+      padding: 12px 4px;
+    }
+
+    .edit_btn{
+        padding: 10px 8px;
+        font-size: 11px;        
+    }
+}
+

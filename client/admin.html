@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang='en' class='wide wow-animation'>
+    <head>
+        <!-- Site Title-->
+        <title>Pocket Aces Table Admin</title>
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta charset="utf-8">
+
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:400,300%7CRoboto+Slab:400,700%7CMontserrat:700%7CPacifico">
+        <link rel="stylesheet" href="/assets/css/style.css">
+        <link rel="stylesheet" href="/assets/js/jquery-ui-1.12.1/jquery-ui.min.css">
+        <link rel="stylesheet" href="/assets/css/pages/admin.css">
+    </head>
+  <body>
+    <!-- Page-->
+    <!--<div class="page text-center">-->
+      <!-- Page Header-->
+      <header class="header">
+        <section class="relative text-center">
+          <div class="container">
+            <div class="text-center">
+              <h1 class='title'><span class='text-bold'>Texas Holdem <br> Pocket Aces Edition</span></h1>
+            </div>
+          </div>
+        </section>
+      </header>
+      <!-- Page Content-->
+      <main class="page-content">
+      <div id="tabs">
+        <ul>
+            <li><a href="#gameConfig_section">Game Configuration</a></li>
+            <li><a href="#bonus_section">Bonus</a></li>
+            <li><a href="#acesPlus_section">Pocket Aces Plus</a></li>
+            <li><a href="#blindBonus_section">Blind Bonus</a></li>
+        </ul>
+
+        <section id="gameConfig_section" class="section section-inset-1">
+            <div class="container">
+                <div class="row">
+                    <form id="config_form">
+                        <div class="form-group">
+                            <label class='form_med' for="startingCredits">Starting Credits:</label>
+                            <input type="text" id="startingCredits" name="startingCredits" class="form-control form_sm form_input">
+                        </div>
+                        <div class="form-group">
+                            <label class='form_med' for="refresh">Refresh Below Chip #:</label>
+                            <input type="text" id="refresh" name="refresh" class="form-control form_sm form_input">
+                        </div>
+                        <div class="form-group">
+                            <label class='form_med' for="bet1Amount"> Chip 1:</label>
+                            <input type="text" id="bet1Amount" name="bet1Amount" class="form-control form_sm form_input">
+                        </div>
+                        <div class="form-group">
+                            <label class='form_med' for="bet2Amount"> Chip 2:</label>
+                            <input type="text" id="bet2Amount" name="bet2Amount" class="form-control form_sm form_input">
+                        </div>
+                        <div class="form-group">
+                            <label class='form_med' for="bet3Amount"> Chip 3:</label>
+                            <input type="text" id="bet3Amount" name="bet3Amount" class="form-control form_sm form_input">
+                        </div>
+                        <div class="form-group">
+                            <label class='form_med' for="bet4Amount"> Chip 4:</label>
+                            <input type="text" id="bet4Amount" name="bet4Amount" class="form-control form_sm form_input">
+                        </div>
+                        <div class="form-group">
+                            <label class='form_med' for="bet5Amount"> Chip 5:</label>
+                            <input type="text" id="bet5Amount" name="bet5Amount" class="form-control form_sm form_input">
+                        </div>
+                        <div class="form-group">
+                            <label class='form_med' for="bet6Amount"> Chip 6:</label>
+                            <input type="text" id="bet6Amount" name="bet6Amount" class="form-control form_sm form_input">
+                        </div>
+                        <div class="form-group">
+                            <label class='form_med' for="variablewager"> Variable Wager Multiplier:</label>
+                            <input type="text" id="variablewager" name="variablewager" class="form-control form_sm form_input">
+                        </div>
+                        <div id="save_button" class="btn-group-variant config-buttons">
+                            <button id="config-save" class="btn btn-sm edit_btn">Update</button>
+                        </div>
+                        <div id="create_button" class="btn-group-variant config-buttons" hidden>
+                            <button id="config-create" class="btn btn-sm edit_btn">Create</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="bonus_section" class="section section-inset-1 pricing-table">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-8">
+                        <div class="table-responsive">
+                            <table class="table-striped table">
+                                <colgroup>
+                                    <col class='col-xs-3'>
+                                </colgroup>
+                                <thead>
+                                    <tr class="bg-light">
+                                        <th class="text-left">Hand</th>
+                                        <th class="text-center">Multiplier</th>
+                                        <th class="text-center"></th>
+                                        <th class="text-center">Base</th>
+                                    </tr>
+                                </thead>
+                                <tbody id='bonusTable'>
+                                </tbody>
+                            </table>
+                        </div> <!-- Table Responsive -->
+                    </div> <!-- Column -->
+                    <!-- Buttons -->
+                    <div class='btn-group-variant paytable-buttons'>
+                        <button id="bonustable-create" class="btn btn-sm edit_btn">Pre-Populate</button>
+                    </div>
+                    </div> <!-- Row -->
+            </div> <!-- Container -->
+        </section>
+          
+        <section id="acesPlus_section" class="section section-inset-1 pricing-table">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-8">
+                        <div class="table-responsive">
+                            <table class="table-striped table">
+                                <colgroup>
+                                    <col class='col-xs-3'>
+                                </colgroup>
+                                <thead>
+                                    <tr class="bg-light">
+                                        <th class="text-left">Hand</th>
+                                        <th class="text-center">Multiplier</th>
+                                        <th class="text-center"></th>
+                                        <th class="text-center">Base</th>
+                                    </tr>
+                                </thead>
+                                <tbody id='acesPlusTable'>
+                                </tbody>
+                            </table>
+                        </div> <!-- Table Responsive -->
+                    </div> <!-- Column -->
+                    <!-- Buttons -->
+                    <div class='btn-group-variant paytable-buttons'>
+                        <button id="acesplustable-create" class="btn btn-sm edit_btn">Pre-Populate</button>
+                    </div>
+                    </div> <!-- Row -->
+            </div> <!-- Container -->
+        </section>
+          
+        <section id="blindBonus_section" class="section section-inset-1 pricing-table">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-8">
+                        <div class="table-responsive">
+                            <table class="table-striped table">
+                                <colgroup>
+                                    <col class='col-xs-3'>
+                                </colgroup>
+                                <thead>
+                                    <tr class="bg-light">
+                                        <th class="text-left">Hand</th>
+                                        <th class="text-center">Multiplier</th>
+                                        <th class="text-center"></th>
+                                        <th class="text-center">Base</th>
+                                    </tr>
+                                </thead>
+                                <tbody id='blindBonusTable'>
+                                </tbody>
+                            </table>
+                        </div> <!-- Table Responsive -->
+                    </div> <!-- Column -->
+                    <!-- Buttons -->
+                    <div class='btn-group-variant paytable-buttons'>
+                        <button id="blindbonustable-create" class="btn btn-sm edit_btn">Pre-Populate</button>
+                    </div>
+                    </div> <!-- Row -->
+            </div> <!-- Container -->
+        </section>
+                    
+      </div> <!-- Tabs -->
+      </main>
+    <!--</div>-->
+    <script src="/assets/js/jquery-3.1.0.min.js"></script>
+    <script src="/assets/js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script src="/assets/js/config.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src='/assets/js/admin.js'></script>
+    <script>
+        page_initialize();
+        page_actions();
+    </script>
+  </body>
+</html>

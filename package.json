@@ -1,0 +1,35 @@
+{
+  "name": "pocketaces3",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ktsquires/pocketaces.git"
+  },
+  "engines": {
+    "node": "10.15.3"
+  },
+  "description": "Server for Texas Holdem - Pocket Aces Edition",
+  "main": "app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d lib"
+  },
+  "author": "Kevin Squires",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "bluebird": "^3.5.4",
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "connect-mongo": "^3.2.0",
+    "express": "^4.16.4",
+    "fs-sync": "^1.0.6",
+    "mongoose": "^5.5.7",
+    "serve-favicon": "^2.5.0",
+    "socket.io": "^2.2.0",
+    "underscore": "^1.8.3"
+  }
+}

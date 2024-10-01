@@ -1,0 +1,1 @@
+module.exports.Config = require('./Config.js');
